@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public enum Nation
-{ 
-    natural=0,
+{
+    Neutral = 0,
     Britain,
     Pirates,
     Spain,
@@ -12,7 +11,7 @@ public enum Nation
     Portuguese,
     Dutch
 }
-public class Fraction : MonoBehaviour
+public class Faction : MonoBehaviour
 {
     [SerializeField] private Nation nation;
     public Nation Nation { get { return nation; } }
