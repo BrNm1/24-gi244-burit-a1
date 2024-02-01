@@ -56,6 +56,8 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private GameObject selectionVisual;
     public GameObject SelectionVisual { get { return selectionVisual; } }
+   
+
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -71,4 +73,10 @@ public class Unit : MonoBehaviour
     {
         
     }
+    public void ToggleSelectionVisual(bool flag)
+    {
+        if (selectionVisual != null)
+            selectionVisual.SetActive(flag);
+    }
+
 }
