@@ -64,14 +64,35 @@ public class Unit : MonoBehaviour
 
     [SerializeField] private GameObject selectionVisual; 
     public GameObject SelectionVisual { get { return selectionVisual; } }
-    [SerializeField] private UnitCost unitCost;
-    public UnitCost UnitCost { get { return unitCost; } }
-    [SerializeField] private float unitWaitTime = 0.1f;
-    public float UnitWaitTime { get { return unitWaitTime; } }
+    
     public void ToggleSelectionVisual(bool flag)
     {
         if (selectionVisual != null)
             selectionVisual.SetActive(flag);
+    }
+    [SerializeField] private UnitCost unitCost;
+    public UnitCost UnitCost { get { return unitCost; } }
+    [SerializeField] private float unitWaitTime = 0.1f;
+    public float UnitWaitTime { get { return unitWaitTime; } }
+    private void Awake()
+    {
+        navAgent = GetComponent<NavMeshAgent>();
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        switch (state)
+        {
+            case UnitState.Move:
+                MoveUpdate();
+                break;       
+        }
     }
     private void SetState(UnitState toState)
     {
@@ -100,30 +121,4 @@ public class Unit : MonoBehaviour
             SetState(UnitState.Idle);
         }
     }
-    
-    
- 
-
-
-    private void Awake()
-    {
-        navAgent = GetComponent<NavMeshAgent>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        switch (state)
-        {
-            case UnitState.Move:
-                MoveUpdate();
-                break;       
-        }
-    }
-    
 }
