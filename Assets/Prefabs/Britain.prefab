@@ -47,12 +47,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nation: 1
-  food: 1000
-  wood: 600
-  gold: 600
-  stone: 200
-  aliveUnits: []
-  aliveBuildings: []
+  food: 0
+  wood: 0
+  gold: 0
+  stone: 0
 --- !u!114 &8800074330641043954
 MonoBehaviour:
   m_ObjectHideFlags: 0
