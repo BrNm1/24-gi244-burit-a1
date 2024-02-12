@@ -1022,6 +1022,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7869263381497073051, guid: a26e11360dc8b2f4494b469c156ea329, type: 3}
   m_PrefabInstance: {fileID: 1582258149}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1582258151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1628787103323542447, guid: a26e11360dc8b2f4494b469c156ea329, type: 3}
+  m_PrefabInstance: {fileID: 1582258149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1807754292a9db4ca9ae4e9acc6a190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1711328589
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1198,6 +1209,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectionMarker: {fileID: 8558632341588255203, guid: 6ba9f10f0be6b3c4d9b547dd179b1f9c, type: 3}
+  unitCountText: {fileID: 0}
+  foodText: {fileID: 0}
+  woodText: {fileID: 0}
+  goldText: {fileID: 0}
+  stoneText: {fileID: 0}
 --- !u!1 &1734079888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1467,6 +1483,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7869263381497073051, guid: c972210816e6b06419867042bc6e723f, type: 3}
   m_PrefabInstance: {fileID: 2050387643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2050387645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1628787103323542447, guid: c972210816e6b06419867042bc6e723f, type: 3}
+  m_PrefabInstance: {fileID: 2050387643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1807754292a9db4ca9ae4e9acc6a190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2141812882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141812884}
+  - component: {fileID: 2141812883}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141812883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141812882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27e381300867fa448a1965ded07b165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myFaction: {fileID: 2050387645}
+  enemyFaction: {fileID: 1582258151}
+  factions:
+  - {fileID: 2050387645}
+  - {fileID: 1582258151}
+--- !u!4 &2141812884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141812882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1478,3 +1554,4 @@ SceneRoots:
   - {fileID: 1737137744}
   - {fileID: 1734079889}
   - {fileID: 1711328589}
+  - {fileID: 2141812884}
