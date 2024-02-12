@@ -68,6 +68,30 @@ public class Building : Structures
         if (faction == GameManager.instance.MyFaction)
             MainUI.instance.UpdateAllResource(faction);
     }
+
+    public void CreateUnitCompleted1()
+    {
+        int id = recruitList[0].ID;
+
+        if (unitPrefabs[id] == null)
+            return;
+
+        GameObject unitObj = Instantiate(unitPrefabs[id], spawnPoint.position, Quaternion.Euler(1f, 180f, 1f));
+
+        recruitList.RemoveAt(0);
+
+        Unit unit = unitObj.GetComponent<Unit>();
+        unit.MoveToPosition(rallyPoint.position); //Go to Rally Point
+
+        //Add unit into faction's Army
+        faction.AliveUnits.Add(unit);
+
+        Debug.Log("Unit Recruited");
+        //If it's me, update UI
+        if (faction == GameManager.instance.MyFaction)
+            MainUI.instance.UpdateAllResource(faction);
+    }
+
     public void ToggleSelectionVisual(bool flag)
     {
         if (SelectionVisual != null)
@@ -103,5 +127,27 @@ public class Building : Structures
                 }
             }
         }
+        if (Input.GetKeyDown(KeyCode.H))
+            ToCreateUnit(1);
+
+        if ((recruitList.Count > 0) && (recruitList[0] != null))
+        {
+            unitTimer += Time.deltaTime;
+            curUnitWaitTime = recruitList[0].UnitWaitTime;
+
+            if (unitTimer >= curUnitWaitTime)
+            {
+                curUnitProgress++;
+                unitTimer = 0f;
+
+                if (curUnitProgress >= 100)
+                {
+                    curUnitProgress = 0;
+                    curUnitWaitTime = 0f;
+                    CreateUnitCompleted1();
+                }
+            }
+        }
+
     }
 }
