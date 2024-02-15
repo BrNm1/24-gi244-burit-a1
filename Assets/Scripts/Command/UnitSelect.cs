@@ -47,6 +47,10 @@ public class UnitSelect : MonoBehaviour
         curUnit = hit.collider.GetComponent<Unit>();
         curUnit.ToggleSelectionVisual(true);
         Debug.Log("Select Unit");
+        if (GameManager.instance.MyFaction.IsMyUnit(CurUnit)) 
+        {
+            ShowUnit(CurUnit);
+        }
     }
     private void TrySelect(Vector2 screenPos)
     {
@@ -73,9 +77,13 @@ public class UnitSelect : MonoBehaviour
     {
         ClearAllSelectionVisual();
         curUnit = null;
+        InfoManeger.instance.ClearAllInfo();
     }
-
-
+    private void ShowUnit(Unit u) 
+    {
+        InfoManeger.instance.ShowAllInfo(u);
+    }
+    
 
 
 
