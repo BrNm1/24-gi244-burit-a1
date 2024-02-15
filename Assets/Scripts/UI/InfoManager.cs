@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class InfoManeger : MonoBehaviour
+public class InfoManager : MonoBehaviour
 {
     [SerializeField] private Image unitPic, hpIcon, rsrcIcon, moveIcon, atkIcon, amrIcon, vslRngIcon, wpRngIcon;
     [SerializeField] private TextMeshProUGUI nameTxt, hpTxt, rsrcTxt, moveTxt, atkTxt, amrTxt, vslRngTxt, wpRngTxt;
@@ -13,6 +13,14 @@ public class InfoManeger : MonoBehaviour
     {
         unitPic.color = Color.white;
         unitPic.sprite = pic;
+    }
+    public void ShowAllInfo(Building building)
+    {
+        SetPic(building.StructurePic);
+        nameTxt.text = building.StructureName;
+
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{building.CurHP}/{building.MaxHP}";
     }
     public void ShowAllInfo(Unit unit)
     {
@@ -36,6 +44,8 @@ public class InfoManeger : MonoBehaviour
 
         wpRngIcon.color = Color.white;
         wpRngTxt.text = $"{unit.WeaponRange}";
+        
+        
     }
     public void ClearAllInfo()
     {
@@ -61,7 +71,7 @@ public class InfoManeger : MonoBehaviour
         wpRngIcon.color = Color.clear;
         wpRngTxt.text = "";
     }
-    public static InfoManeger instance;
+    public static InfoManager instance;
     private void Awake()
     {
         instance = this;

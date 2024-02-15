@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4875026800134793228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049275700682667888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RallyPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3771159798856067563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,9 +117,9 @@ GameObject:
   - component: {fileID: 3625304165007107215}
   - component: {fileID: 9145658624674201146}
   - component: {fileID: 4942347625114638705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Headquater
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +140,7 @@ Transform:
   - {fileID: 4875026800134793228}
   - {fileID: 3771159798856067563}
   - {fileID: 1049275700682667888}
+  - {fileID: 2696416573246420241}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5195640769664285530
@@ -159,11 +160,10 @@ MonoBehaviour:
   curHP: 0
   maxHP: 0
   faction: {fileID: 0}
-  selectionVisual: {fileID: 0}
+  selectionVisual: {fileID: 3614985007756994829}
   spawnPoint: {fileID: 3771159798856067563}
   rallyPoint: {fileID: 1049275700682667888}
-  unitPrefabs:
-  - {fileID: 111782, guid: 21b015006876797429d371ba6895535f, type: 3}
+  unitPrefabs: []
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
@@ -240,6 +240,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4875026800134793228}
     m_Modifications:
+    - target: {fileID: 130162, guid: 14da64593db4ed6499b78711c2695f89, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 405974, guid: 14da64593db4ed6499b78711c2695f89, type: 3}
       propertyPath: m_RootOrder
       value: 566
@@ -298,6 +302,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Room_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 188640, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 491972, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
       propertyPath: m_RootOrder
       value: 559
@@ -348,6 +356,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4875026800134793228}
     m_Modifications:
+    - target: {fileID: 188640, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 491972, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
       propertyPath: m_RootOrder
       value: 557
@@ -401,6 +413,10 @@ PrefabInstance:
     - target: {fileID: 188640, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Room_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 188640, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 491972, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
       propertyPath: m_RootOrder
@@ -456,6 +472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Front_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 109878, guid: e69a1b47940791a4d88bccd841fed794, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 418688, guid: e69a1b47940791a4d88bccd841fed794, type: 3}
       propertyPath: m_RootOrder
       value: 562
@@ -506,6 +526,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4875026800134793228}
     m_Modifications:
+    - target: {fileID: 109878, guid: e69a1b47940791a4d88bccd841fed794, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 418688, guid: e69a1b47940791a4d88bccd841fed794, type: 3}
       propertyPath: m_RootOrder
       value: 558
@@ -548,6 +572,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 418688, guid: e69a1b47940791a4d88bccd841fed794, type: 3}
   m_PrefabInstance: {fileID: 3739700293405126659}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3953704186012342568
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8011635519172804087}
+    m_Modifications:
+    - target: {fileID: 357298073091338277, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_Name
+      value: SelectionSqure
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+--- !u!4 &2696416573246420241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+  m_PrefabInstance: {fileID: 3953704186012342568}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3614985007756994829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 357298073091338277, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+  m_PrefabInstance: {fileID: 3953704186012342568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4041551761317853863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 105502, guid: bc20288029af09d409990a23291af694, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Room_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 105502, guid: bc20288029af09d409990a23291af694, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 470794, guid: bc20288029af09d409990a23291af694, type: 3}
       propertyPath: m_RootOrder
@@ -618,6 +713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Room_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 188640, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 491972, guid: 1b2e9a3fb39ad2541ae12a6e37365d98, type: 3}
       propertyPath: m_RootOrder
       value: 561
@@ -671,6 +770,10 @@ PrefabInstance:
     - target: {fileID: 130162, guid: 14da64593db4ed6499b78711c2695f89, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Tower_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 130162, guid: 14da64593db4ed6499b78711c2695f89, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 405974, guid: 14da64593db4ed6499b78711c2695f89, type: 3}
       propertyPath: m_RootOrder
@@ -726,6 +829,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4875026800134793228}
     m_Modifications:
+    - target: {fileID: 152494, guid: ac06b8204a31fce4483b81a2b93a1aaf, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 496442, guid: ac06b8204a31fce4483b81a2b93a1aaf, type: 3}
       propertyPath: m_RootOrder
       value: 563
@@ -779,6 +886,10 @@ PrefabInstance:
     - target: {fileID: 152494, guid: ac06b8204a31fce4483b81a2b93a1aaf, type: 3}
       propertyPath: m_Name
       value: SM_Bld_Cuba_Hall_Room_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 152494, guid: ac06b8204a31fce4483b81a2b93a1aaf, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 496442, guid: ac06b8204a31fce4483b81a2b93a1aaf, type: 3}
       propertyPath: m_RootOrder
