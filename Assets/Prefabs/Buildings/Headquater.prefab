@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   structureName: 
-  structurePic: {fileID: 0}
+  structurePic: {fileID: 21300000, guid: 00aaa5e45728c074f807dfe1ca47279a, type: 3}
   curHP: 0
   maxHP: 0
   faction: {fileID: 0}
@@ -188,7 +188,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 15, y: 13, z: 20}
-  m_Center: {x: 3, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!208 &9145658624674201146
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -199,11 +199,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 8.5, y: 6.5, z: 10}
+  m_Extents: {x: 7.5, y: 6.5, z: 10}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &4942347625114638705
 Rigidbody:
@@ -584,13 +584,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SelectionSqure
       objectReference: {fileID: 0}
+    - target: {fileID: 357298073091338277, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1420315672577682489, guid: 72f36643af3652f49aa76055c6b7631e, type: 3}
       propertyPath: m_LocalPosition.z
