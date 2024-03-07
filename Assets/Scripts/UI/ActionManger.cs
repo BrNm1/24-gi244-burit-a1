@@ -10,6 +10,11 @@ public class ActionManger : MonoBehaviour
 
     private CanvasGroup cg;
     public static ActionManger instance;
+    void Awake()
+    {
+        instance = this;
+        cg = GetComponent<CanvasGroup>();
+    }
 
     private void HideCreateUnitButtons()
     {

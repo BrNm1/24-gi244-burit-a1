@@ -9,7 +9,7 @@ public class Building : Structures
     [SerializeField] private Transform rallyPoint;
     public Transform RallyPoint { get { return rallyPoint; } }
 
-    [SerializeField] private GameObject[] unitPrefabs;
+    [SerializeField] private GameObject[] unitPrefabs ;
     public GameObject[] UnitPrefabs { get {  return unitPrefabs; } }
 
     [SerializeField] private List<Unit> recruitList = new List<Unit>();

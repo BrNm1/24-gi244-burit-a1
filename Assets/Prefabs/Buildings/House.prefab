@@ -229,6 +229,7 @@ MonoBehaviour:
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 1
 --- !u!1001 &263656622688470108
 PrefabInstance:
   m_ObjectHideFlags: 0

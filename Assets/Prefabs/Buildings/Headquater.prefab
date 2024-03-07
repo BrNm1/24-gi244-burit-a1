@@ -163,11 +163,14 @@ MonoBehaviour:
   selectionVisual: {fileID: 3614985007756994829}
   spawnPoint: {fileID: 3771159798856067563}
   rallyPoint: {fileID: 1049275700682667888}
-  unitPrefabs: []
+  unitPrefabs:
+  - {fileID: 111782, guid: 21b015006876797429d371ba6895535f, type: 3}
+  - {fileID: 7577354733243972060, guid: 224a1212016766f498f17da9b371c5d8, type: 3}
   recruitList: []
   unitTimer: 0
   curUnitProgress: 0
   curUnitWaitTime: 0
+  isFunctional: 1
 --- !u!65 &3625304165007107215
 BoxCollider:
   m_ObjectHideFlags: 0
