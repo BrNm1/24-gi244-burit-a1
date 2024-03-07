@@ -10,6 +10,7 @@ public class Building : Structures
     public Transform RallyPoint { get { return rallyPoint; } }
 
     [SerializeField] private GameObject[] unitPrefabs;
+    public GameObject[] UnitPrefabs { get {  return unitPrefabs; } }
 
     [SerializeField] private List<Unit> recruitList = new List<Unit>();
 
@@ -17,6 +18,9 @@ public class Building : Structures
     [SerializeField] private int curUnitProgress = 0;
 
     [SerializeField] private float curUnitWaitTime = 0f;
+
+    [SerializeField] private bool isFunctional;
+    public bool IsFunctional { get { return isFunctional; } set { isFunctional = value; } }
     public void ToCreateUnit(int i)
     {
         Debug.Log(structureName + " creates " + i + ":" + unitPrefabs.Length);

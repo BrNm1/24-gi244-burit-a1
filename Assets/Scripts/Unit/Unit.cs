@@ -21,6 +21,11 @@ public enum UnitState
 
 public class Unit : MonoBehaviour
 {
+    [SerializeField] private bool isBuilder;
+    public bool IsBuilder { get { return isBuilder; } set { isBuilder = value; } }
+
+    [SerializeField] private Builder builder;
+    public Builder Builder { get { return builder; } }
     [SerializeField] private int id;
     public int ID { get { return id; } set { id = value; } }
 
@@ -61,6 +66,7 @@ public class Unit : MonoBehaviour
     public NavMeshAgent NavAgent { get { return navAgent; } }
 
     [SerializeField] private Faction faction;
+    public Faction Faction { get {  return faction; } set { faction = value; } }
 
     [SerializeField] private GameObject selectionVisual; 
     public GameObject SelectionVisual { get { return selectionVisual; } }
