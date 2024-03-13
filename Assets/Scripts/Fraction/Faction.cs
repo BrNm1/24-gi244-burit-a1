@@ -27,6 +27,14 @@ public class Faction : MonoBehaviour
     [SerializeField] private List<Unit> aliveUnits = new List<Unit>();
     public List<Unit> AliveUnits { get { return aliveUnits; } }
     [SerializeField] private List<Building> aliveBuildings = new List<Building>();
+    [SerializeField] private Transform unitsParent;
+    public Transform UnitsParent { get { return unitsParent; } }
+
+    [SerializeField] private Transform buildingsParent;
+    public Transform BuildingsParent { get { return buildingsParent; } }
+
+    [SerializeField] private Transform ghostBuildingParent;
+    public Transform GhostBuildingParent { get { return ghostBuildingParent; } }
     public List<Building> AliveBuildings { get { return aliveBuildings; } }
     public bool IsMyBuilding(Building b)
     {
@@ -58,6 +66,29 @@ public class Faction : MonoBehaviour
     public bool IsMyUnit(Unit u)
     {
         return aliveUnits.Contains(u);
+    }
+    public bool CheckBuildingCost(Building building)
+    {
+        if (food < building.StructureCost.food)
+            return false;
+
+        if (wood < building.StructureCost.wood)
+            return false;
+
+        if (gold < building.StructureCost.gold)
+            return false;
+
+        if (stone < building.StructureCost.stone)
+            return false;
+
+        return true;
+    }
+    public void DeductBuildingCost(Building building)
+    {
+        food -= building.StructureCost.food;
+        wood -= building.StructureCost.wood;
+        gold -= building.StructureCost.gold;
+        stone -= building.StructureCost.stone;
     }
     // Start is called before the first frame update
     void Start()

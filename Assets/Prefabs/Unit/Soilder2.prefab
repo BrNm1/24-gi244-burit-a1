@@ -4682,10 +4682,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91401dbeceaf4a244a47ea33b197bfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBuilder: 0
+  builder: {fileID: 0}
   id: 1
   unitName: 
   unitPic: {fileID: 21300000, guid: e904979826a55e64c85564d27daaa783, type: 3}
-  curHP: 0
+  curHP: 100
   maxHP: 100
   moveSpeed: 5
   minWpnDamage: 0

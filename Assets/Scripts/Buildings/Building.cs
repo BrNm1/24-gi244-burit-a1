@@ -21,6 +21,13 @@ public class Building : Structures
 
     [SerializeField] private bool isFunctional;
     public bool IsFunctional { get { return isFunctional; } set { isFunctional = value; } }
+    [SerializeField] private bool isHQ;
+    public bool IsHQ { get { return IsHQ; } }
+
+    [SerializeField] private float intoTheGround =5f;
+    public float IntoTheGround { get { return intoTheGround; } }  
+
+
     public void ToCreateUnit(int i)
     {
         Debug.Log(structureName + " creates " + i + ":" + unitPrefabs.Length);
@@ -104,7 +111,7 @@ public class Building : Structures
     // Start is called before the first frame update
     void Start()
     {
-        curHP = maxHP;
+        
     }
 
     // Update is called once per frame
