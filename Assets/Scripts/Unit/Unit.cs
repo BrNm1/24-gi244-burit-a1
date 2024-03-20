@@ -8,6 +8,8 @@ public enum UnitState
     Idle,
     Move,
     Attack,
+    MoveToBuild,
+    BuildProgress,
     Die
 }
 
@@ -79,7 +81,7 @@ public class Unit : MonoBehaviour
         if (selectionVisual != null)
             selectionVisual.SetActive(flag);
     }
-    private void SetState(UnitState toState)
+    public void SetState(UnitState toState)
     {
         state = toState;
         if (state == UnitState.Idle)
@@ -106,11 +108,6 @@ public class Unit : MonoBehaviour
             SetState(UnitState.Idle);
         }
     }
-    
-    
- 
-
-
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
