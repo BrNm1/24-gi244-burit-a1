@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
 
     [SerializeField] private float dist;
 
-    [Header("rotate")]
+    [Header("Rotate")]
     [SerializeField] private float rotationAmount;
     [SerializeField] private Quaternion newRotation;
     
@@ -57,10 +57,12 @@ public class CameraController : MonoBehaviour
         transform.position += dir * moveSpeed * Time.deltaTime;
         transform.position = Clamp(conner1.position, conner2.position);
     }
-    private Vector3 Clamp(Vector3 lowerLeft,Vector3 topRight ) 
+    private Vector3 Clamp(Vector3 lowerLeft, Vector3 topRight)
     {
         Vector3 pos = new Vector3(Mathf.Clamp(transform.position.x, lowerLeft.x, topRight.x),
-            transform.position.y, Mathf.Clamp(transform.position.z, lowerLeft.z, topRight.z));
+                                  transform.position.y,
+                                  Mathf.Clamp(transform.position.z, lowerLeft.z, topRight.z));
+
         return pos;
     }
     private void Zoom()
@@ -70,11 +72,14 @@ public class CameraController : MonoBehaviour
             zoomModifier = 0.01f;
         if (Input.GetKey(KeyCode.X))
             zoomModifier = -0.01f;
+
         dist = Vector3.Distance(transform.position, cam.transform.position);
+
         if (dist < minZoomDist && zoomModifier > 0f)
-            return;
-        if (dist < maxZoomDist && zoomModifier < 0f)
-            return;
+            return; //too close
+        else if (dist > maxZoomDist && zoomModifier < 0f)
+            return; //too far
+
         cam.transform.position += cam.transform.forward * zoomModifier * zoomSpeed;
     }
     void Rotate()

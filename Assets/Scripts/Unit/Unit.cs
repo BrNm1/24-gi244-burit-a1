@@ -10,6 +10,10 @@ public enum UnitState
     Attack,
     MoveToBuild,
     BuildProgress,
+    MoveToResource,
+    Gather,
+    DeliverToHQ,
+    StoreAtHQ,
     Die
 }
 
@@ -76,6 +80,19 @@ public class Unit : MonoBehaviour
     public UnitCost UnitCost { get { return unitCost; } }
     [SerializeField] private float unitWaitTime = 0.1f;
     public float UnitWaitTime { get { return unitWaitTime; } }
+    [SerializeField] private bool isWorker;
+    public bool IsWorker { get { return isWorker; } set { isWorker = value; } }
+
+    [SerializeField] private Worker worker;
+    public Worker Worker { get { return worker; } }
+    
+    [SerializeField]
+    private float pathUpdateRate = 1.0f;
+    public float PathUpdateRate { get { return pathUpdateRate; } }
+
+    [SerializeField]
+    private float lastPathUpdateTime;
+    public float LastPathUpdateTime { get { return lastPathUpdateTime; } set { lastPathUpdateTime = value; } }
     public void ToggleSelectionVisual(bool flag)
     {
         if (selectionVisual != null)
@@ -108,6 +125,14 @@ public class Unit : MonoBehaviour
             SetState(UnitState.Idle);
         }
     }
+    public void LookAt(Vector3 pos)
+    {
+        Vector3 dir = (pos - transform.position).normalized;
+        float angle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
+
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+    }
+
     private void Awake()
     {
         navAgent = GetComponent<NavMeshAgent>();
@@ -115,6 +140,10 @@ public class Unit : MonoBehaviour
         if(IsBuilder) 
         { 
             builder=GetComponent<Builder>();
+        }
+        if (IsWorker)
+        { 
+            worker=GetComponent<Worker>();
         }
     }
     // Start is called before the first frame update
