@@ -82,6 +82,7 @@ public class Worker : MonoBehaviour
     }
     private void DeliverToHQUpdate()
     {
+        Debug.Log("In deliver to Hq update");
         if (Time.time - unit.LastPathUpdateTime > unit.PathUpdateRate)
         {
             unit.LastPathUpdateTime = Time.time;

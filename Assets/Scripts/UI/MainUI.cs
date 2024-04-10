@@ -5,6 +5,8 @@ using TMPro;
 
 public class MainUI : MonoBehaviour
 {
+    [SerializeField] private RectTransform selectionBox;
+    public RectTransform SelectionBox { get { return selectionBox; } }
     [SerializeField] 
     private GameObject selectionMarker;
     public GameObject SelectionMarker { get { return selectionMarker; } }

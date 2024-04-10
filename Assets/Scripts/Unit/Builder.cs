@@ -196,6 +196,7 @@ public class Builder : MonoBehaviour
             return;
 
         if (unit != null)
+           
         {
             if (other.gameObject == inProgressBuilding)
             {

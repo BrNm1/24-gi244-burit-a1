@@ -22,7 +22,7 @@ public class Building : Structures
     [SerializeField] private bool isFunctional;
     public bool IsFunctional { get { return isFunctional; } set { isFunctional = value; } }
     [SerializeField] private bool isHQ;
-    public bool IsHQ { get { return IsHQ; } }
+    public bool IsHQ { get { return isHQ; } }
 
     [SerializeField] private float intoTheGround =5f;
     public float IntoTheGround { get { return intoTheGround; } }

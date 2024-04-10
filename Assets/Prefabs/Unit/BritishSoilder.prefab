@@ -699,7 +699,7 @@ GameObject:
   - component: {fileID: 9101116469361333651}
   - component: {fileID: 7310131870087516837}
   m_Layer: 6
-  m_Name: Soilder
+  m_Name: BritishSoilder
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,8 +815,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91401dbeceaf4a244a47ea33b197bfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isBuilder: 0
+  builder: {fileID: 0}
   id: 0
-  unitName: 
+  unitName: Brit.Regular
   unitPic: {fileID: 21300000, guid: de4c9fce5bb59e347a7207b521d12f9b, type: 3}
   curHP: 100
   maxHP: 100
@@ -835,6 +837,10 @@ MonoBehaviour:
     gold: 20
     stone: 0
   unitWaitTime: 0.1
+  isWorker: 0
+  worker: {fileID: 0}
+  pathUpdateRate: 1
+  lastPathUpdateTime: 0
 --- !u!114 &7310131870087516837
 MonoBehaviour:
   m_ObjectHideFlags: 0

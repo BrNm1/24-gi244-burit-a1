@@ -79,6 +79,15 @@ public class InfoManager : MonoBehaviour
         wpRngTxt.text = "";
     }
     public static InfoManager instance;
+    public void ShowEnemyAllInfo(Unit unit)
+    {
+        SetPic(unit.UnitPic);
+        nameTxt.text = unit.UnitName;
+
+        hpIcon.color = Color.white;
+        hpTxt.text = $"{unit.CurHP}/{unit.MaxHP}";
+    }
+    
     private void Awake()
     {
         instance = this;

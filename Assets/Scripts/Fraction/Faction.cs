@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 public enum Nation
 {
@@ -97,10 +98,15 @@ public class Faction : MonoBehaviour
     }
     public Vector3 GetHQSpawnPos()
     {
+        
         foreach (Building b in aliveBuildings)
         {
             if (b.IsHQ)
+            {
+                UnityEngine.Debug.Log(b.SpawnPoint.position + "gethqspawnpos");
                 return b.SpawnPoint.position;
+               
+            }
         }
         return startPosition.position;
     }

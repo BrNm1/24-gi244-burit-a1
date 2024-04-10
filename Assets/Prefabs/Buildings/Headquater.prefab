@@ -178,7 +178,7 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 1
   isHQ: 1
-  intoTheGround: 5
+  intoTheGround: 2
 --- !u!65 &3625304165007107215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -210,11 +210,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 7.5, y: 6.5, z: 10}
+  m_Extents: {x: 5, y: 6.5, z: 8.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 5, z: 0}
   m_TimeToStationary: 0.5
 --- !u!54 &4942347625114638705
 Rigidbody:

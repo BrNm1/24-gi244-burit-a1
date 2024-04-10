@@ -236,7 +236,7 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 1
   isHQ: 0
-  intoTheGround: 5
+  intoTheGround: 0
 --- !u!1001 &263656622688470108
 PrefabInstance:
   m_ObjectHideFlags: 0
