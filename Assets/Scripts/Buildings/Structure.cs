@@ -38,6 +38,17 @@ public abstract class  Structures : MonoBehaviour
     [SerializeField]
     private StructureCost sturctureCost;
     public  StructureCost StructureCost { get {  return sturctureCost; } set {  sturctureCost = value; } }
+    protected void Die()
+    {
+        InfoManager.instance.ClearAllInfo();
+        Destroy(gameObject);
+    }
+    public void TakeDamage(int damage)
+    {
+        curHP -= damage;
+        if (curHP <= 0)
+            Die();
+    }
 
     // Start is called before the first frame update
     void Start()

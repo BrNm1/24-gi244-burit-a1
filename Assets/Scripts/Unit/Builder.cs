@@ -155,6 +155,7 @@ public class Builder : MonoBehaviour
     }
     private void BuildProgress()
     {
+        Debug.Log("Checked");
         if (inProgressBuilding == null)
             return;
 
