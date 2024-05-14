@@ -158,7 +158,7 @@ MonoBehaviour:
   structureName: HeadQuater
   structurePic: {fileID: 21300000, guid: 00aaa5e45728c074f807dfe1ca47279a, type: 3}
   curHP: 0
-  maxHP: 0
+  maxHP: 100
   faction: {fileID: 0}
   selectionVisual: {fileID: 3614985007756994829}
   sturctureCost:
@@ -178,7 +178,7 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 1
   isHQ: 1
-  intoTheGround: 5
+  intoTheGround: 7
 --- !u!65 &3625304165007107215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -198,8 +198,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 18.808744, y: 23.62109, z: 18.38583}
-  m_Center: {x: 0.18804836, y: 10.676296, z: -0.80708504}
+  m_Size: {x: 18, y: 26.63254, z: 18}
+  m_Center: {x: 0.18, y: 8, z: 0.8}
 --- !u!208 &9145658624674201146
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -210,11 +210,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 9.40437, y: 11.810545, z: 9.192915}
+  m_Extents: {x: 9.5, y: 13.5, z: 9.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.1880484, y: 10.6763, z: -0.807085}
+  m_Center: {x: 0.18, y: 8, z: -0.8000002}
   m_TimeToStationary: 0.5
 --- !u!54 &4942347625114638705
 Rigidbody:

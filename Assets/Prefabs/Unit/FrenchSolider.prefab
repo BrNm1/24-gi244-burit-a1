@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: id
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6401029851946857283, guid: 224a1212016766f498f17da9b371c5d8, type: 3}
+      propertyPath: faction
+      value: 
+      objectReference: {fileID: 4834496560164188582, guid: 1422500426a37874996a300eb03738d5, type: 3}
     - target: {fileID: 7577354733243972060, guid: 224a1212016766f498f17da9b371c5d8, type: 3}
       propertyPath: m_Name
       value: FrenchSolider

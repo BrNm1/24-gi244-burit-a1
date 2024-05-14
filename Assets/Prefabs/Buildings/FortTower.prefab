@@ -51,9 +51,9 @@ GameObject:
   - component: {fileID: 67448146001521064}
   - component: {fileID: 4689232577239805300}
   - component: {fileID: 5967775415972579467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FortTower
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,8 +135,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 32.084797, y: 11.537253, z: 32.392494}
-  m_Center: {x: 0.32874632, y: 5.6359572, z: 0.008548737}
+  m_Size: {x: 37.081684, y: 14.740385, z: 34.16635}
+  m_Center: {x: -1.438757, y: 1.3855677, z: -0.96496964}
 --- !u!208 &4689232577239805300
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -147,11 +147,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 16.0424, y: 5.768625, z: 16.196245}
+  m_Extents: {x: 17.5, y: 6, z: 16}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0.3287463, y: 5.635957, z: 0.008548737}
+  m_Center: {x: -1.438757, y: 1.385568, z: -0.9649696}
   m_TimeToStationary: 0.5
 --- !u!54 &5967775415972579467
 Rigidbody:
@@ -175,8 +175,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_06 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -202,7 +206,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.7
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -250,6 +254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Door_09
       objectReference: {fileID: 0}
+    - target: {fileID: 139618, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_RootOrder
       value: 212
@@ -260,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 413402, guid: 190d4f5956778ad4187f87bab391090c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -308,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_06 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -318,7 +330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.7
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -366,6 +378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_06 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -376,7 +392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.7
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -424,6 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_06
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -434,7 +454,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.7
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.z
@@ -476,23 +496,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 4.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2475
       objectReference: {fileID: 0}
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4
+      value: 4.99
       objectReference: {fileID: 0}
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: -5.2
       objectReference: {fileID: 0}
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1240257175888745761, guid: 7a2f54cf0d8e20847b287f105a1fd796, type: 3}
       propertyPath: m_LocalRotation.w
@@ -557,6 +581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Fort_Base_Circle_03
       objectReference: {fileID: 0}
+    - target: {fileID: 182560, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 491736, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
       propertyPath: m_RootOrder
       value: 242
@@ -579,7 +607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 491736, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.3
       objectReference: {fileID: 0}
     - target: {fileID: 491736, guid: f13660f99fcad8047a78a78d1dc1d46a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -627,6 +655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Cannon_06 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 169560, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_RootOrder
       value: 131
@@ -637,7 +669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.7
+      value: 5.3999996
       objectReference: {fileID: 0}
     - target: {fileID: 433856, guid: 04e5ad3b4d0e23842a04b203a7ef5e46, type: 3}
       propertyPath: m_LocalPosition.z

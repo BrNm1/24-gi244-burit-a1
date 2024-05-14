@@ -79,6 +79,28 @@ public class Turrets : Building
             state = TurretState.Idle;
         }
     }
+    private void CheckForAttack()
+    {
+        if (!IsFunctional || CurHP <= 0)
+            return;
+
+        Unit enemyUnit = CheckForNearbyEnemies();
+
+        if (enemyUnit != null)
+        {
+            targetUnit = enemyUnit.gameObject;
+            state = TurretState.Defending;
+        }
+        else //No unit to attack
+        {
+            targetUnit = null;
+            state = TurretState.Idle;
+        }
+
+        if (state == TurretState.Defending)
+            ShootAtEnemy();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
