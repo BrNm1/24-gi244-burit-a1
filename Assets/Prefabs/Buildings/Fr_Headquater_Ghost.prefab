@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 7561056502199133651}
   - component: {fileID: -13957876800186154}
   m_Layer: 2
-  m_Name: Headquater_Ghost
+  m_Name: Fr_Headquater_Ghost
   m_TagString: GhostBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

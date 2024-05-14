@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 1424258784185229505}
   - component: {fileID: -1668698968831519435}
   m_Layer: 2
-  m_Name: House_Ghost
+  m_Name: Fr_House_Ghost 1
   m_TagString: GhostBuilding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

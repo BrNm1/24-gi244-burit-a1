@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 9145658624674201146}
   - component: {fileID: 4942347625114638705}
   m_Layer: 7
-  m_Name: Headquater
+  m_Name: Fr_Headquater
   m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

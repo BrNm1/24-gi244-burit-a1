@@ -155,6 +155,10 @@ public class UnitSelect : MonoBehaviour
             }
         }
     }
+    private void ShowEnemyUnit(Unit u) 
+    { 
+        InfoManager.instance.ShowEnemyAllInfo(u);
+    }
     private void ClearAllSelectionVisual()
     {
         foreach (Unit u in curUnits)
@@ -169,8 +173,10 @@ public class UnitSelect : MonoBehaviour
         ClearAllSelectionVisual();
         curUnits.Clear();
         curBuilding = null;
+        curResource = null;
+        curEnemy = null;
         InfoManager.instance.ClearAllInfo();
-        
+        ActionManger.instance.ClearAllInfo();
     }
     private void ShowUnit(Unit u) 
     {
@@ -208,5 +214,22 @@ public class UnitSelect : MonoBehaviour
     private void ShowEnemyBuilding(Building b)
     {
         InfoManager.instance.ShowEnemyAllInfo(b);
+    }
+
+    private void UpdateUI()
+    {
+        if (curUnits.Count == 1)
+            ShowUnit(curUnits[0]);
+        else if (curEnemy != null)
+            ShowEnemyUnit(curEnemy);
+        else if (curResource != null)
+            ShowResource();
+        else if (curBuilding != null)
+        {
+            if (GameManager.instance.MyFaction.IsMyBuilding(curBuilding))
+                ShowBuilding(curBuilding);//Show building info
+            else
+                ShowEnemyBuilding(curBuilding);
+        }
     }
 }
