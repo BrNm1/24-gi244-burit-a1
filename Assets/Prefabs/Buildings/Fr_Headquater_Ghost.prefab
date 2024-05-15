@@ -275,7 +275,7 @@ MonoBehaviour:
   structurePic: {fileID: 0}
   curHP: 0
   maxHP: 0
-  faction: {fileID: 0}
+  faction: {fileID: 4834496560164188582, guid: 1422500426a37874996a300eb03738d5, type: 3}
   selectionVisual: {fileID: 0}
   sturctureCost:
     food: 0
@@ -291,6 +291,8 @@ MonoBehaviour:
   curUnitWaitTime: 0
   isFunctional: 0
   isHQ: 0
+  isHousing: 0
+  isBarrack: 0
   intoTheGround: 5
 --- !u!1001 &1187935093031914431
 PrefabInstance:

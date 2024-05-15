@@ -20,6 +20,9 @@ public class UnitSelect : MonoBehaviour
     private Vector2 oldAnchoredPos;//Box old anchored position
     private Vector2 startPos;//point where mouse is down
 
+    private float timer =0f;
+    private float timelimit = 0.5f;
+
 
 
     private Camera cam;
@@ -118,6 +121,12 @@ public class UnitSelect : MonoBehaviour
         {
             ReleaseSelectionBox(Input.mousePosition);
             TrySelect(Input.mousePosition);
+        }
+        timer += Time.deltaTime;
+        if (timer >= timelimit ) 
+        { 
+            timer = 0f;
+            UpdateUI();
         }
 
     }
