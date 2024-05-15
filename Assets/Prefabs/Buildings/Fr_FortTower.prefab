@@ -91,7 +91,7 @@ MonoBehaviour:
   structurePic: {fileID: 0}
   curHP: 1
   maxHP: 100
-  faction: {fileID: 0}
+  faction: {fileID: 4834496560164188582, guid: 1422500426a37874996a300eb03738d5, type: 3}
   selectionVisual: {fileID: 2951708906534761825}
   sturctureCost:
     food: 0

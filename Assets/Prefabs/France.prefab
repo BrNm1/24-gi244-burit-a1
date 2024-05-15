@@ -189,8 +189,19 @@ MonoBehaviour:
   ghostBuildingParent: {fileID: 2732147996954623668}
   startPosition: {fileID: 7305538744913720263}
   newResourceRange: 50
-  buildingPrefabs: []
-  unitPrefabs: []
+  buildingPrefabs:
+  - {fileID: 2136007857151155940, guid: 6d6cef861d2874d4692fdb25fa77edcb, type: 3}
+  - {fileID: 2136007857151155940, guid: 711756452a9cc1c429300c7682daced9, type: 3}
+  - {fileID: 6214365868850696245, guid: b0625abb00645e54abea540fa394fff1, type: 3}
+  - {fileID: 8795095307287631659, guid: 58cf793dbb2c42e4b9f0cb960da380c6, type: 3}
+  ghostBuildingPrefabs:
+  - {fileID: 2136007857151155940, guid: fde7f725de7cefe47811a16ace1bc96c, type: 3}
+  - {fileID: 2136007857151155940, guid: 17b60660d4a7b1f4aaa594bb513ba524, type: 3}
+  - {fileID: 6214365868850696245, guid: 63c95c780484c704b8e863331bdf0ecf, type: 3}
+  - {fileID: 8795095307287631659, guid: 5d5fff86f1a5b524589e23c672ccfd45, type: 3}
+  unitPrefabs:
+  - {fileID: 5640203728799904590, guid: 1b4e922c3a2ef964c99e40e5a2a3aae2, type: 3}
+  - {fileID: 1746651778984863197, guid: 9757b25e47f43c248a072f5239254fe5, type: 3}
 --- !u!114 &1719394946592011905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +251,9 @@ MonoBehaviour:
   fighters: []
   builders: []
   workers: []
+  hq: []
+  houses: []
+  barracks: []
   faction: {fileID: 0}
 --- !u!114 &8295110677727978764
 MonoBehaviour:

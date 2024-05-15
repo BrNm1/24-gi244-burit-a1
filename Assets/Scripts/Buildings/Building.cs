@@ -129,6 +129,18 @@ public class Building : Structures
         }
         return num;
     }
+    protected override void Die()
+    {
+        if (faction != null)
+            faction.AliveBuildings.Remove(this);
+
+        if (IsHousing)
+            faction.UpdateHousingLimit();
+
+        base.Die();
+
+        //Check Victory Condition
+    }
 
     // Start is called before the first frame update
     void Start()
